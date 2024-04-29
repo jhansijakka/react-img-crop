@@ -1,0 +1,20 @@
+stages:
+  - build
+  - test
+  - deploy
+
+code-build:
+  stage: build
+  script:
+    - echo "Running demo for checking Ruby version and executing Ruby files"
+    - npm run build
+
+code-unit-test:
+  stage: test
+  script:
+    - echo "Running tests"
+
+code-deploy:
+  stage: deploy
+  script:
+    - echo "Deploying in some config..."
